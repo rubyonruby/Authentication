@@ -1,0 +1,21 @@
+<%= form_tag "/usersession/create" do  %>
+ <% if flash[:notice] %>
+ 	<div class="notice"><%= flash[:notice] %></div>
+ <%end%>
+
+ <% if flash[:error] %>
+ 	<div class="error"><%= flash[:error] %></div>
+ <%end%>
+
+  <div class="field">
+    <%= label_tag :email %><br>
+    <%= text_field_tag :email %>
+  </div>
+  <div class="field">
+    <%= label_tag :password %><br>
+    <%= text_field_tag :password %>
+  </div>
+  <div class="actions">
+    <%= submit_tag "SignIn" %>
+  </div>
+<% end %>
